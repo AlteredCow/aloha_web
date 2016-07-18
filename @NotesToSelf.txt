@@ -1,0 +1,30 @@
+# slideshow += cursor += imgs menu side
+# redo slideup of sub-menus (asian, family)
+# asian menu --> collapse all feature at top { animate }
+# bump-up font weight?
+# (?) two-columns into one on half-screen
+# shiftTo implement
+
+# item-price <topRow> application
+# Change "#anchorX" to another name
+# 20-80 div split 
+# fix names (ids to _ & more descriptive naming)
+
+% animations
+% Change headers to look more appealing, 
+
+? small slideshow for asian pix
+? Keep hours also on top of main page.
+? Possibly highlight/ change [text] color of current food item's cell.
+? Remove "Not available"? Tacky. Change to generic image (food-related)
+
+<> Difference b/w 36.95 and 69.95 prices!?
+<> video
+<> try on different screens
+<> try on different devices
+<> suggest that they change the url
+
+$ compress / beautify code
+$ spellcheck
+$ Delete personal comments. Add commentary.
+$ Clean clutter.

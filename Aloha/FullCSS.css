@@ -1,0 +1,318 @@
+/* ---- GENERAL VALUES ---- */
+
+html{
+
+}
+
+body
+{
+	background-image: url("./other_img/sky.JPG") !important; 
+	background: center center fixed no-repeat; 
+	font-family: arial;
+	text-align:center;
+	overflow-x: hidden;
+	min-width: 1250px;
+	width: 100%;
+
+}
+
+div:not(#pageTop){
+	background: #EFEFEF;	
+}
+
+
+a{ 
+	text-decoration:none; 
+}
+
+ul{ 
+	list-style-type:none;
+	margin-left:auto; margin-right:auto; 
+	
+}
+ 
+ /* alternating list-item colors */
+ #AsianMenuSection tr:nth-child(odd),
+ #HawaiianMenuSection tr:nth-child(odd), 
+ #finalFoodSection tr:nth-child(odd) { 
+  	background: linear-gradient(#F9CB8A, #F5B54C); 
+		border-right: 3px black;
+
+	}
+	
+/* alternating list-item colors */	
+ #AsianMenuSection tr:nth-child(even), 
+ #HawaiianMenuSection tr:nth-child(even),
+ #finalFoodSection tr:nth-child(even) { 
+ 	background: linear-gradient(#EA8F21, #E4AD0C); 
+	}
+
+.topRow { /* charts - to separate header rows from content rows */
+	background-color: #cacaca;	
+	padding: 8px;
+}
+
+.header { /* category names */
+	font-size: 36px; 
+	font-weight:bold;
+	text-shadow: #AAAAAA 2px 2px 2px;
+}
+
+.food_type{
+	font-size: 20px; font-weight: bold;
+}
+
+.main_content{
+	margin-left: 200px;
+}
+
+.main_content ul {
+	/* for a table feel */
+ 	columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 0px;
+	-webkit-column-gap: 0px; 
+    -moz-column-gap: 0px;
+	
+	width: 50%;
+	min-width: 200px;
+	padding: 0;
+
+}
+
+.main_content table{
+	margin: 0 auto;
+	border-spacing: 0;
+}
+.main_content td{
+	padding-top: 10px;
+	height: 40px;
+	font-size: 14px;
+	min-width: 200px;
+	
+}
+
+/* ------------------------------------------------------- */
+
+
+/* ---- P*: NAVIGATION -------------------------------- */
+
+#navi { /* navigational menu */
+	z-index:999;
+	position: fixed; 
+	bottom:45px; 
+	margin: 0; padding: 0;
+	
+	height: 200px; 
+	width:200px; 
+
+}
+
+#navDiv{
+
+	box-shadow: 0px 2px 8px #ccc;
+	-moz-box-shadow:0px 2px 8px #ccc;
+	-webkit-box-shadow: 0px 2px 8px #ccc;	
+}
+
+#navi li {
+	background: linear-gradient(#ECECEC, #C8C8C8);
+	display: block; 
+	font-weight: bold;
+	font-size:13px;
+
+
+}
+
+#navi a {
+	color: #6D6D6D;
+	display: block;
+	padding: 16px;
+	height: 100%;
+}
+
+#navi a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* ------------------------------------------------------ */
+
+
+/* ---- P1: BANNER AREA ------ */
+
+
+#pageTop{
+	width: 100%; height: 350px;
+	/*background: linear-gradient(#E99B1A, #EF1014);*/
+}
+
+#homeList{width: 100%; display:inline-block;}
+
+#storeFront { /* image of restaurant */
+	height: 300px; 
+	width: 200px;
+	margin: 8px;
+	float: left;
+	box-shadow: 0px 0px 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+}
+
+#welcomeText{
+	
+	
+	display: block;
+	font-size: 48px; 
+	text-shadow: 0px 0px 5px #fff;
+	-moz-text-shadow: 0 0 5px #fff;
+	-webkit-text-shadow: 0 0 5px #fff;	
+}
+
+/* ------------------------------------------------------ */
+
+/* ---- P2: ASIAN MENU ---- */
+
+#AsianMenuSection{
+	
+	border: 2px solid #212121;
+	
+	columns: 1;
+	-webkit-columns: 1;
+   	-moz-columns: 1;
+	
+	/* side-by-side menus 
+ 	columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 0px;
+	-webkit-column-gap: 0px; 
+    -moz-column-gap: 0px; */
+}
+
+@media screen and (max-width: 1250px){
+ #AsianMenuSection{ 
+		/*	columns: 1;
+	    -webkit-columns: 1;
+    	-moz-columns: 1;
+		*/
+		
+		
+	} 
+	
+	#welcomeText{
+		text-align: left;
+	}
+
+}
+
+
+#AsianMenuSection td{
+	/*background: linear-gradient(#FCD440, orange);*/
+	
+}
+
+#AsianMenuSection, #HawaiianMenuSection, #finalFoodSection{
+	padding-bottom: 100px;
+}
+
+#leftSideAsian{
+	width: 50%; 
+	float: left;
+}
+#rightSideAsian{
+	width: 50%; 
+	float: right;	
+}
+#specials{}
+
+
+/* ---- P3: HAWAIIAN MENU ---- */
+
+#HawaiianMenuSection{
+	/*background:linear-gradient(#FF3333, #FFA2A2);*/
+	border: 2px solid #212121;
+	
+}
+
+#HawaiianMenu{
+
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	
+	
+	-moz-border-radius: 4px;  
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#currentImg{ /* regarding slide-deck */
+	
+	
+	width: 290px; 
+	height: 210px;
+	border: 1px solid black;
+}
+
+
+/* ------------------------------------------------------ */
+
+/* ---- P4: FINAL FOOD PORTION ---- */
+
+#finalFoodSection{
+		/*background: linear-gradient(#FFB472, #FFE639);*/
+		border: 2px solid #212121;
+}
+
+#family_food, #cateringNotes{
+	border: 5px solid #EA8C1B;
+	min-width: 600px;
+
+}
+
+#family_food li, #cateringNotes li{
+	background: #FAD5A0;
+	border: 2px solid #EA8C1B;
+	padding: 12px;
+	
+}
+
+#catering{
+}
+
+
+#caterPic{
+	width:395px; height: 170px;
+	border: 2px solid #212121;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* ------------------------------------------------- */
+
+/* ----- P5: REMAINING INFORMATION ---- */
+
+#contact{
+	/*background: linear-gradient(#EF1014, #E99B1A);*/
+	border: 2px solid #212121;
+	text-align:center;
+	font-family:arial;
+	
+}
+
+#copy{font-size:12px;}
+
+#aboutUs{
+	font-size:30px;	
+	border:2px dashed black;
+}
+
+/* ---------------------------------
+------- DOC END -------------
+------------------------------------ */
