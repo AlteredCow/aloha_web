@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Family{
+	border: 3px solid black;
+	text-align: center;
+	width:400px; height:160px;
+	font-size:14px;
+	font-family:helvetica;
+	table-layout:fixed;
+	background:linear-gradient(#ffff00, #E4AD0C);
+	/* below: rounding table corners */
+	-moz-border-radius: 5px;  
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+	/* end of rounding */
+}
+
+tr:nth-child(even) {background: linear-gradient(#EB891C, #E4AD0C);}
+tr:nth-child(odd)  {background: linear-gradient(#E1DBDB, #F3A629);}
+
+#catering{
+	font-family:helvetica;
+	border-collapse:collapse;
+	border: 2px solid black;
+	text-align: center;	
+}
+
+#caterPic{width:395px; height:160px;}
+	
+#topRow{ /* to separate header rows from content rows */
+	font-family:arial;
+	text-align:center;
+	height:30px;
+	background-color:#FAF5AC;	
+	-moz-border-radius: 2px;  
+	-khtml-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.familyBox td{ /* also used for beverages */
+	font-family:arial; text-align: center;	
+	border: 1px black groove;
+	-moz-border-radius: 2px;  
+	-khtml-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 1px 2px #757575;
+}

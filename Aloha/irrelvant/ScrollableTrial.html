@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src = "ScrollMyAttempt.js"></script>
+<link rel="stylesheet" type="text/css" href="ScrollableTrialCSS.css">
+</head>
+
+<body onload = "playPause()">
+<!--slideshow-->
+<div style="position: absolute; right: 300px; top: 40px;" class = "slider">
+  <ul>
+    <!-- Buttons and display image -->
+    <li> <input width = "50px" type="image" src="leftArrow.png " onclick=			 "slidePrevious();" title = "Previous Image" style = "position: absolute; top: 60px; left: -10px"/>
+    </li>
+    <li> <img src="Minced.jpg" name="Image" id = "Present" onclick = "playPause()" title = "Click to Pause/ Resume Slideshow">
+      <input width = "50px" type="image" src="rightArrow.png " onClick="slideNext();" title = "Next Image" style = "position: absolute; top: 60px; left: 270px"/>
+    </li>
+    
+    <!-- Captions & Caption Box -->
+    <div id = "captionBox"><li id = "captions"><span> Minced Chicken w/ Lettuce Wraps: $6.25 </span></li></div>
+    
+  </ul>
+</div>
+
+</body>
+</html>

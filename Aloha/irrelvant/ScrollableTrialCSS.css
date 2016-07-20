@@ -1,0 +1,40 @@
+.slider{
+	margin-left:auto; margin-right:auto;
+	position:fixed;
+	display:block;
+	font-family: arial;
+}
+	
+#Present{ /* Current, displayed image */
+	margin-left:auto; margin-right:auto;
+	border-style:solid;
+	border-width:3px;
+	width:220px; height:150px;
+	box-shadow: 5px 4px #E9C340;
+	position:fixed;
+}
+	
+#captions{
+		margin-left:auto; margin-right:auto;
+	position:absolute;	
+	top:17px;
+	font-size:12px;
+	text-align:center;
+    white-space: nowrap;
+	left:4px;
+}
+
+#captionBox{
+		margin-left:auto; margin-right:auto;
+    width: 180px;
+    padding: 23px;
+    border: 2px solid black;
+	top:185px;
+	position:absolute;
+	background-color:#FBB43F;
+	line-height: 10px;
+}
+	
+body{background-image:url('lightWallpaper.png')}
+
+ul{ list-style-type: none; }

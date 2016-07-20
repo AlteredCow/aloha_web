@@ -1,12 +1,9 @@
 # slideshow += cursor += imgs menu side
 # redo slideup of sub-menus (asian, family)
 # asian menu --> collapse all feature at top { animate }
-# bump-up font weight?
 # (?) two-columns into one on half-screen
 # shiftTo implement
 
-# item-price <topRow> application
-# Change "#anchorX" to another name
 # 20-80 div split 
 # fix names (ids to _ & more descriptive naming)
 
@@ -18,11 +15,13 @@
 ? Possibly highlight/ change [text] color of current food item's cell.
 ? Remove "Not available"? Tacky. Change to generic image (food-related)
 
-<> Difference b/w 36.95 and 69.95 prices!?
+% Difference b/w 36.95 and 69.95 prices!?
+% suggest that they change the url
+% remove item-price listing & tags?
+
 <> video
 <> try on different screens
 <> try on different devices
-<> suggest that they change the url
 
 $ compress / beautify code
 $ spellcheck
