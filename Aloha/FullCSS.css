@@ -10,14 +10,12 @@ body
 	background: center center fixed no-repeat; 
 	font-family: arial;
 	text-align:center;
-	overflow-x: hidden;
+	
 	min-width: 1250px;
-	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 
-}
-
-div:not(#pageTop){
-	background: #EFEFEF;	
 }
 
 
@@ -64,11 +62,18 @@ th{
 }
 
 .food_type{
-	font-size: 20px; font-weight: bold;
+	font-size: 20px; 
+	font-weight: bold;
 }
 
-.main_content{
-	margin-left: 200px;
+#mainContentWrapper{
+		float: right;
+		width: 80%;
+		background: #EFEFEF;	
+}
+
+#HawaiianMenuSection, #familySection, #finalFoodSection, #contactSection{
+	border-top: 2px solid #212121;
 }
 
 
@@ -91,6 +96,7 @@ th{
 	margin: 0 auto;
 	border-spacing: 0;
 }
+
 .main_content td{
 	padding-top: 10px;
 	height: 40px;
@@ -100,23 +106,7 @@ th{
 }
 
 
-@media screen and (max-width: 950px){
-	#welcomeText{
-		text-align: left;
-	}
-	
-	#leftSideAsian{
-	width: 100%; 
-	float: left;
-	
-}
-	#rightSideAsian{
-	width: 100%; 
-	float: left;	
-}
 
-
-}
 
 /* ------------------------------------------------------- */
 
@@ -125,16 +115,17 @@ th{
 
 #navi { /* navigational menu */
 	z-index:999;
-	position: fixed; 
-	bottom:45px; 
-	margin: 0; padding: 0;
 	
-	height: 200px; 
-	width:200px; 
+	margin: 0;
+	padding: 0;
 
 }
 
+#trial{display: flex;}
+
 #navWrapper{
+	float: left;
+	width: 20%;
 
 	box-shadow: 0px 2px 8px #ccc;
 	-moz-box-shadow:0px 2px 8px #ccc;
@@ -146,7 +137,6 @@ th{
 	display: block; 
 	font-weight: bold;
 	font-size:13px;
-
 
 }
 
@@ -168,18 +158,24 @@ th{
 /* ---- P1: BANNER AREA ------ */
 
 
+
+
 #pageTop{
-	width: 100%; height: 350px;
-	/*background: linear-gradient(#E99B1A, #EF1014);*/
+	
+	height: 350px;
+	
 }
 
-#homeList{width: 100%; display:inline-block;}
+#homeList{
+
+	position: inline-block;
+	}
 
 #storeFront { /* image of restaurant */
 	height: 300px; 
 	width: 200px;
-	margin: 8px;
-	float: left;
+	margin: 10px;
+
 	box-shadow: 0px 0px 5px #000;
 	-moz-box-shadow: 0 0 5px #000;
 	-webkit-box-shadow: 0 0 5px #000;
@@ -201,24 +197,11 @@ th{
 
 #AsianMenuSection{
 	
-	border: 2px solid #212121;
-	
 	columns: 1;
 	-webkit-columns: 1;
    	-moz-columns: 1;
 	
-	/* side-by-side menus 
- 	columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    column-gap: 0px;
-	-webkit-column-gap: 0px; 
-    -moz-column-gap: 0px; */
-}
 
-#AsianMenuSection td{
-	/*background: linear-gradient(#FCD440, orange);*/
-	
 }
 
 #AsianMenuSection, #HawaiianMenuSection, #finalFoodSection{
@@ -233,14 +216,11 @@ th{
 	width: 50%; 
 	float: right;	
 }
-#specials{}
 
 
 /* ---- P3: HAWAIIAN MENU ---- */
 
 #HawaiianMenuSection{
-	/*background:linear-gradient(#FF3333, #FFA2A2);*/
-	border: 2px solid #212121;
 	
 }
 
@@ -271,7 +251,7 @@ th{
 
 #finalFoodSection{
 		/*background: linear-gradient(#FFB472, #FFE639);*/
-		border: 2px solid #212121;
+	
 }
 
 #family_food, #cateringNotes{
@@ -298,17 +278,13 @@ th{
 }
 
 
-
-
-
-
 /* ------------------------------------------------- */
 
 /* ----- P5: REMAINING INFORMATION ---- */
 
-#contact{
+#contactSection{
 	/*background: linear-gradient(#EF1014, #E99B1A);*/
-	border: 2px solid #212121;
+
 	text-align:center;
 	font-family:arial;
 	
@@ -325,7 +301,32 @@ th{
 	margin-top: 40px;
 }
 
+/* ----- P*: Media Screen ---- */
+@media screen and (max-width: 950px){
+	body{
+		min-width: 600px;
+		
+	}
+	
+	#welcomeText{
+		text-align: left;
+		font-size:  36px;
+	}
+	
+	#leftSideAsian{
+	width: 100%; 
+	float: left;
+	
+}
+	#rightSideAsian{
+	width: 100%; 
+	float: left;	
+}
 
+
+}
+
+/* ------------------------------------------------- */
 /* ---------------------------------
 ------- DOC END -------------
 ------------------------------------ */

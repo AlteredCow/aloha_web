@@ -3,6 +3,7 @@
 # asian menu --> collapse all feature at top { animate }
 # (?) two-columns into one on half-screen
 # shiftTo implement
+# "sticky header" implement
 
 # 20-80 div split 
 # fix names (ids to _ & more descriptive naming)
@@ -18,6 +19,7 @@
 % Difference b/w 36.95 and 69.95 prices!?
 % suggest that they change the url
 % remove item-price listing & tags?
+% testimonies?
 
 <> video
 <> try on different screens
