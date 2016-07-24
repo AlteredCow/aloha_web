@@ -1,12 +1,12 @@
 # slideshow += cursor += imgs menu side
 # redo slideup of sub-menus (asian, family)
 # asian menu --> collapse all feature at top { animate }
-# (?) two-columns into one on half-screen
 # shiftTo implement
 # "sticky header" implement
 
-# 20-80 div split 
-# fix names (ids to _ & more descriptive naming)
+# fix ul weird spacing in finalFoodSection
+# swap 20-80 split 
+# fix names (+= ids to _ & more descriptive naming)
 
 % animations
 % Change headers to look more appealing, 

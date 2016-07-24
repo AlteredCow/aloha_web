@@ -1,10 +1,34 @@
-// Collapsable table contents.
-function show(ID)
+/* ------------ COLLAPSABLE ASIAN TABLES -------------- */
+function showTables()
 {
-var element = document.getElementById(ID);
-if(element.style.display == 'none') {element.style.display = 'block';}
-else {element.style.display = 'none';}
+	var element = document.getElementById('collapseBox');
+	if(element.innerHTML == 'Open All') {element.style.display = 'block';}
+	else {element.style.display = 'none';}
 } 
+
+/* ------------------------------------------ */
+
+/* --------- STICKY NAV MENU ------------- */
+window.addEventListener("scroll", function(func) {
+	var scrollMark = $(window).scrollTop();
+	var threshold = $('#AsianMenuSection').position().top;
+	var navMenu = "#navWrapper";
+
+	
+	if (scrollMark > threshold){
+	   $(navMenu).css({
+				"position": "fixed",
+				"top":0
+			});
+	} else {
+		   $(navMenu).css({
+				"position": "static"
+			});
+	}
+	
+
+});
+/* ------------------------------------------ */
 
 // Presentation for Hawaiian Menu dishes that
 // contain images, prices, and descriptions.
