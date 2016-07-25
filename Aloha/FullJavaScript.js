@@ -1,9 +1,18 @@
 /* ------------ COLLAPSABLE ASIAN TABLES -------------- */
-function showTables()
+function toggleTables()
 {
-	var element = document.getElementById('collapseBox');
-	if(element.innerHTML == 'Open All') {element.style.display = 'block';}
-	else {element.style.display = 'none';}
+	var closeStatement = "Collapse All";
+	var openStatement = "Open All";
+	var asianTables = "#asianArea table";
+	var toggleBox = document.getElementById('collapseBox');
+	
+	if (toggleBox.innerHTML === closeStatement) {
+		$(asianTables).fadeOut(300);
+		$(toggleBox).text(openStatement);
+	} else {
+		$(asianTables).fadeIn(800);
+		$(toggleBox).text(closeStatement);
+	}
 }
 
 document.addEventListener("click", function (event){
@@ -15,12 +24,13 @@ document.addEventListener("click", function (event){
 		// requires schema: table follows <a> header 
 		var clickedMenu = $(clickedElement).next("table");
 		
-		// toggle view 
+		// toggle visibility 
 		var isOpen = $(clickedMenu).css("display") != "none";
-		var displayStyle = isOpen? "none" : "block";
-		$(clickedMenu).css({
-            "display": displayStyle,
-        });
+		if (isOpen){
+			$(clickedMenu).fadeOut(300);
+		} else {
+			$(clickedMenu).fadeIn(600);
+		}
 	
 	}
 }); 
@@ -36,7 +46,7 @@ function shiftTo(area){
 	if (area==='home') spacing -= 50; // top of page
 	
 	// performing the scroll 
-	$('html,body').animate({scrollTop: spacing}, 1300);	
+	$('html,body').stop().animate({scrollTop: spacing}, 1500);	
 }
 
 /* ------------------------------------------- */

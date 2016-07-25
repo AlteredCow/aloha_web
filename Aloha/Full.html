@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
    <head>
       <meta charset="utf-8">
@@ -9,7 +11,6 @@
          "text/javascript"></script>
    </head>
    <body>
-      
       <div id="homeArea" class = "page_top">
          <ul id="homeList">
             <li style="float:left;"><img alt = "Store frontside" id="storeFront" src=
@@ -29,13 +30,14 @@
             <li title= "Return to Home"><a href = "javascript:shiftTo('home')"> HOME</a></li>
             <li title= "Jump to Asian Menu"><a href = "javascript:shiftTo('asian')">ASIAN MENU</a></li>
             <li title= "Jump to Hawaiian Menu"><a href = "javascript:shiftTo('hawaiian')">HAWAIIAN MENU</a></li>
-            <li title= "Jump to Family, Other"><a href = "javascript:shiftTo('other')">FAMILY & OTHER</a></li>
+            <li title= "Jump to family, catering, and drinks"><a href = "javascript:shiftTo('other')">FAMILY & OTHER</a></li>
             <li title= "Read our Basic Information"><a href = "javascript:shiftTo('about')">ABOUT US</a></li>
          </ul>
       </div>
       <div id = "mainContentWrapper" class = "main_content">
          <div id="asianArea">
             <p class="header">Asian Menu</p>
+            <a id ="collapseBox" href="javascript:toggleTables();">Collapse All</a>
             <div id = "leftSideAsian">
                <a href="javascript:;" class = "food_type">Appetizers</a>
                <table id = "appetizers">
@@ -447,61 +449,62 @@
             </p>
             <img alt = "Catering food" id="caterPic" src="./food_img/Catering.jpg">
             <table id="catering">
-			<thead>
-			  <tr>
+               <thead>
+                  <tr>
                      <th>ITEM</th>
                      <th>PRICE - X</th>
-					 <th>PRICE - Y</th>
+                     <th>PRICE - Y</th>
                   </tr>
-			</thead>
-			<tfoot><tr></tr>
-			</tfoot>
-			<tbody>
-               <tr>
-                  <td>Steamed Rice</td>
-                  <td>$15.95</td>
-                  <td>$25.95</td>
-               </tr>
-               <tr>
-                  <td>Macaroni Salad</td>
-                  <td>$19.95</td>
-                  <td>$32.95</td>
-               </tr>
-               <tr>
-                  <td>Chicken Katsu</td>
-                  <td>$36.95</td>
-                  <td>$69.95</td>
-               </tr>
-               <tr>
-                  <td>Teriyaki Chicken</td>
-                  <td>$36.95</td>
-                  <td>$69.95</td>
-               </tr>
-               <tr>
-                  <td>Hawaiian BBQ Chicken</td>
-                  <td>$36.95</td>
-                  <td>$69.95</td>
-               </tr>
-               <tr>
-                  <td>Hawaiian BBQ Beef</td>
-                  <td>$42.95</td>
-                  <td>$80.95</td>
-               </tr>
-               <tr>
-                  <td>Aloha BBQ Pork-Chop</td>
-                  <td>$42.95</td>
-                  <td>$80.95</td>
-               </tr>
-               <tr>
-                  <td>Mahi - Mahi</td>
-                  <td>$42.95</td>
-                  <td>$80.95</td>
-               </tr>
-               <tr>
-                  <td>Fried Shrimp</td>
-                  <td>$42.95</td>
-                  <td>$80.95</td>
-               </tr>
+               </thead>
+               <tfoot>
+                  <tr></tr>
+               </tfoot>
+               <tbody>
+                  <tr>
+                     <td>Steamed Rice</td>
+                     <td>$15.95</td>
+                     <td>$25.95</td>
+                  </tr>
+                  <tr>
+                     <td>Macaroni Salad</td>
+                     <td>$19.95</td>
+                     <td>$32.95</td>
+                  </tr>
+                  <tr>
+                     <td>Chicken Katsu</td>
+                     <td>$36.95</td>
+                     <td>$69.95</td>
+                  </tr>
+                  <tr>
+                     <td>Teriyaki Chicken</td>
+                     <td>$36.95</td>
+                     <td>$69.95</td>
+                  </tr>
+                  <tr>
+                     <td>Hawaiian BBQ Chicken</td>
+                     <td>$36.95</td>
+                     <td>$69.95</td>
+                  </tr>
+                  <tr>
+                     <td>Hawaiian BBQ Beef</td>
+                     <td>$42.95</td>
+                     <td>$80.95</td>
+                  </tr>
+                  <tr>
+                     <td>Aloha BBQ Pork-Chop</td>
+                     <td>$42.95</td>
+                     <td>$80.95</td>
+                  </tr>
+                  <tr>
+                     <td>Mahi - Mahi</td>
+                     <td>$42.95</td>
+                     <td>$80.95</td>
+                  </tr>
+                  <tr>
+                     <td>Fried Shrimp</td>
+                     <td>$42.95</td>
+                     <td>$80.95</td>
+                  </tr>
                </tbody>
             </table>
             <ul id = "cateringNotes">
@@ -514,31 +517,32 @@
             </ul>
             <p class="header">Beverages</p>
             <table id="beverages">
-			<thead>
-			  <tr>
+               <thead>
+                  <tr>
                      <th>ITEM</th>
                      <th>PRICE </th>
                   </tr>
-			</thead>
-			<tfoot><tr></tr>
-			</tfoot>
-			<tbody>
-               <tr>
-                  <td>Hot Tea</td>
-                  <td>$1.50</td>
-               </tr>
-               <tr>
-                  <td>Bottled Water</td>
-                  <td>$1.50</td>
-               </tr>
-               <tr>
-                  <td>Fountain Drink</td>
-                  <td>$1.75</td>
-               </tr>
-               <tr>
-                  <td>Bottled Juice</td>
-                  <td>$2.50</td>
-               </tr>
+               </thead>
+               <tfoot>
+                  <tr></tr>
+               </tfoot>
+               <tbody>
+                  <tr>
+                     <td>Hot Tea</td>
+                     <td>$1.50</td>
+                  </tr>
+                  <tr>
+                     <td>Bottled Water</td>
+                     <td>$1.50</td>
+                  </tr>
+                  <tr>
+                     <td>Fountain Drink</td>
+                     <td>$1.75</td>
+                  </tr>
+                  <tr>
+                     <td>Bottled Juice</td>
+                     <td>$2.50</td>
+                  </tr>
                </tbody>
             </table>
          </div>
@@ -549,7 +553,7 @@
             <p class="header" >Address</p>
             <a href=  "https://www.google.com/maps/place/Aloha+Hawaiian+BBQ+%26+Asian+Bistro/@39.988277,-83.032504,19z/data=!3m1!4b1!4m2!3m1!1s0x88388ef76bc2bfbb:0xa8f9ec8cfd3e1888"
                target = "_blank" title="Click for location on Google Maps">974 W 5th Ave<br>
-            Columbus, OH 43212</a><br>
+            Columbus, OH 43212</a>
             <p class="header" >Phone</p>
             (614) 298 - 9688<br>
             (614) 294 - 1688
@@ -563,7 +567,6 @@
                <br>
             </p>
          </div>
-
       </div>
    </body>
 </html>

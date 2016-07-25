@@ -1,8 +1,9 @@
 # slideshow += cursor += imgs menu side
 # asian menu --> collapse all feature at top { animate }
 
-# swap 20-80 split 
 # fix names (+= ids to _ & more descriptive naming)
+# [asian] anchors are extending past words
+# nav-menu wonky upon scroll-in
 
 % animations
 % Change headers to look more appealing, 
