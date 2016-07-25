@@ -9,8 +9,8 @@
          "text/javascript"></script>
    </head>
    <body>
-      <a id="anchorHome"></a>
-      <div id="pageTop" class = "page_top">
+      
+      <div id="homeArea" class = "page_top">
          <ul id="homeList">
             <li style="float:left;"><img alt = "Store frontside" id="storeFront" src=
                "./other_img/StoreFront.jpg"></li>
@@ -21,25 +21,23 @@
                &amp; Asian Bistro</strong>
                <hr>
             <li> 
-               <a id="anchorAsian"></a> 
             </li>
          </ul>
       </div>
-	 
       <div id = "navWrapper">
          <ul id="navi">
-            <li title= "Return to Home"><a href = "#"> HOME</a></li>
-            <li title= "Jump to Asian Menu"><a href = "#">ASIAN MENU</a></li>
-            <li title= "Jump to Hawaiian Menu"><a href = "#">HAWAIIAN MENU</a></li>
-            <li title= "Jump to Family, Other"><a href = "#">FAMILY & OTHER</a></li>
-            <li title= "Read our Basic Information"><a href = "#">ABOUT US</a></li>
+            <li title= "Return to Home"><a href = "javascript:shiftTo('home')"> HOME</a></li>
+            <li title= "Jump to Asian Menu"><a href = "javascript:shiftTo('asian')">ASIAN MENU</a></li>
+            <li title= "Jump to Hawaiian Menu"><a href = "javascript:shiftTo('hawaiian')">HAWAIIAN MENU</a></li>
+            <li title= "Jump to Family, Other"><a href = "javascript:shiftTo('other')">FAMILY & OTHER</a></li>
+            <li title= "Read our Basic Information"><a href = "javascript:shiftTo('about')">ABOUT US</a></li>
          </ul>
       </div>
       <div id = "mainContentWrapper" class = "main_content">
-         <div id="AsianMenuSection">
+         <div id="asianArea">
             <p class="header">Asian Menu</p>
             <div id = "leftSideAsian">
-               <p class = "food_type"><a href="javascript:a()">Appetizers</a> </p>
+               <a href="javascript:;" class = "food_type">Appetizers</a>
                <table id = "appetizers">
                   <thead>
                      <tr>
@@ -77,7 +75,7 @@
                      </tr>
                   </tbody>
                </table>
-               <p class = "food_type"><a href="javascript:a()">Fried Rice</a></p>
+               <a href="javascript:;" class = "food_type">Fried Rice</a>
                <table>
                   <thead>
                      <tr>
@@ -123,7 +121,7 @@
                      </tr>
                   </tbody>
                </table>
-               <p class = "food_type"><a href="javascript:a()">Lo Mein</a></p>
+               <a href="javascript:;" class = "food_type">Lo Mein</a>
                <table id = "loMein">
                   <thead>
                      <tr>
@@ -157,7 +155,7 @@
                      </tr>
                   </tbody>
                </table>
-               <p class = "food_type"><a href="javascript:a()">Pad Thai</a></p>
+               <a href="javascript:;" class = "food_type">Pad Thai</a>
                <table>
                   <thead>
                      <tr>
@@ -189,7 +187,7 @@
                </table>
             </div>
             <div id = "rightSideAsian">
-               <p class = "food_type"><a href="javascript:a()">Chef's Specialty</a> </p>
+               <a href="javascript:;" class = "food_type">Chef's Specialty</a>
                <table id = "specials">
                   <thead>
                      <tr>
@@ -271,8 +269,7 @@
                      </tr>
                   </tbody>
                </table>
-               <a id="anchorHawaiian" ></a>
-               <p class = "food_type"><a href="javascript:a()">Noodles</a></p>
+               <a href="javascript:;" class = "food_type">Noodles</a>
                <table id = "noodles">
                   <thead>
                      <tr>
@@ -310,7 +307,7 @@
                      </tr>
                   </tbody>
                </table>
-               <p class = "food_type"><a href="javascript:a()">Salads</a> </p>
+               <a href="javascript:;" class = "food_type">Salads</a>
                <table>
                   <thead>
                      <tr>
@@ -341,7 +338,7 @@
                </table>
             </div>
          </div>
-         <div id="HawaiianMenuSection">
+         <div id="hawaiianArea">
             <p class="header"><br>
                Hawaiian Menu
             </p>
@@ -430,8 +427,7 @@
                </tbody>
             </table>
          </div>
-         <a id="anchorOther" ></a>
-         <div id="finalFoodSection">
+         <div id="otherArea">
             <p class="header" style="margin-top:50px">Family Meal</p>
             <p id = "familyIntro">
                A hearty meal for 4 people<br>
@@ -548,7 +544,7 @@
          </div>
          <div id="contactSection">
             <br>
-            <a id="anchorAbout"></a>
+            <a id="aboutArea"></a>
             <p id = "aboutUs" class="header">About Us</p>
             <p class="header" >Address</p>
             <a href=  "https://www.google.com/maps/place/Aloha+Hawaiian+BBQ+%26+Asian+Bistro/@39.988277,-83.032504,19z/data=!3m1!4b1!4m2!3m1!1s0x88388ef76bc2bfbb:0xa8f9ec8cfd3e1888"

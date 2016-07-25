@@ -4,21 +4,55 @@ function showTables()
 	var element = document.getElementById('collapseBox');
 	if(element.innerHTML == 'Open All') {element.style.display = 'block';}
 	else {element.style.display = 'none';}
-} 
+}
+
+document.addEventListener("click", function (event){
+	
+	var clickedElement = event.target;
+	
+	if (clickedElement.classList.contains("food_type")){
+		
+		// requires schema: table follows <a> header 
+		var clickedMenu = $(clickedElement).next("table");
+		
+		// toggle view 
+		var isOpen = $(clickedMenu).css("display") != "none";
+		var displayStyle = isOpen? "none" : "block";
+		$(clickedMenu).css({
+            "display": displayStyle,
+        });
+	
+	}
+}); 
 
 /* ------------------------------------------ */
+
+/*------- NAVIGATION --------------------------*/
+
+function shiftTo(area){
+	var tag_name = "#" + area + "Area";
+	var destination = $(tag_name);
+	var spacing = destination.offset().top;
+	if (area==='home') spacing -= 50; // top of page
+	
+	// performing the scroll 
+	$('html,body').animate({scrollTop: spacing}, 1300);	
+}
+
+/* ------------------------------------------- */
 
 /* --------- STICKY NAV MENU ------------- */
 window.addEventListener("scroll", function(func) {
 	var scrollMark = $(window).scrollTop();
-	var threshold = $('#AsianMenuSection').position().top;
+	var threshold = $('#asianArea').position().top;
 	var navMenu = "#navWrapper";
 
 	
 	if (scrollMark > threshold){
 	   $(navMenu).css({
 				"position": "fixed",
-				"top":0
+				"top":0,
+				"right": 0
 			});
 	} else {
 		   $(navMenu).css({

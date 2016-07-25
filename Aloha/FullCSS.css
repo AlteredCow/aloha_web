@@ -18,7 +18,6 @@ body
 	
 }
 
-
 a{ 
 	text-decoration:none; 
 }
@@ -35,24 +34,25 @@ th{
 
  
  /* alternating list-item colors */
- #AsianMenuSection tr:nth-child(odd),
- #HawaiianMenuSection tr:nth-child(odd), 
- #finalFoodSection tr:nth-child(odd) { 
+ #asianArea tr:nth-child(odd),
+ #hawaiianArea tr:nth-child(odd), 
+ #otherArea tr:nth-child(odd) { 
   	background: linear-gradient(#F9CB8A, #F5B54C); 
 		border-right: 3px black;
 
 	}
 	
 /* alternating list-item colors */	
- #AsianMenuSection tr:nth-child(even), 
- #HawaiianMenuSection tr:nth-child(even),
- #finalFoodSection tr:nth-child(even) { 
+ #asianArea tr:nth-child(even), 
+ #hawaiianArea tr:nth-child(even),
+ #otherArea tr:nth-child(even) { 
  	background: linear-gradient(#EA8F21, #E4AD0C); 
 	}
 
 .highlighted { /* to separate special information */
 	background-color: #cacaca;	
 	padding: 8px;
+	font-weight: 700;
 }
 
 .header { /* category names */
@@ -67,12 +67,12 @@ th{
 }
 
 #mainContentWrapper{
-		float: right;
+		float: left;
 		width: 80%;
 		background: #EFEFEF;	
 }
 
-#HawaiianMenuSection, #familySection, #finalFoodSection, #contactSection{
+#hawaiianArea, #familySection, #otherArea, #contactSection{
 	border-top: 2px solid #212121;
 }
 
@@ -123,9 +123,8 @@ th{
 
 
 #navWrapper{
-	float: left;
+	float: right;
 	width: 20%;
-
 
 }
 
@@ -157,7 +156,7 @@ th{
 
 
 
-#pageTop{
+#homeArea{
 	
 	height: 350px;
 	
@@ -190,18 +189,21 @@ th{
 
 /* ------------------------------------------------------ */
 
-/* ---- P2: ASIAN MENU ---- */
+/* ---- P2: ASIAN MENUS ---- */
 
-#AsianMenuSection{
+#asianArea{
 	
 	columns: 1;
 	-webkit-columns: 1;
    	-moz-columns: 1;
 	
-
 }
 
-#AsianMenuSection, #HawaiianMenuSection, #finalFoodSection{
+#asianArea table{
+	display: none; // TEMPORARY
+}
+
+#asianArea, #hawaiianArea, #otherArea{
 	padding-bottom: 100px;
 }
 
@@ -217,7 +219,7 @@ th{
 
 /* ---- P3: HAWAIIAN MENU ---- */
 
-#HawaiianMenuSection{
+#hawaiianArea{
 	
 }
 
@@ -246,7 +248,7 @@ th{
 
 /* ---- P4: FINAL FOOD PORTION ---- */
 
-#finalFoodSection{
+#otherArea{
 		/*background: linear-gradient(#FFB472, #FFE639);*/
 	
 }
@@ -304,12 +306,12 @@ th{
 		min-width: 600px;
 	}
 	
-	#finalFoodSection td{
+	#otherArea td{
 		min-width: 140px;
 		padding: 8px;
 	}
 	
-	 #finalFoodSection ul{
+	 #otherArea ul{
 		min-width: 140px;
 		
 	

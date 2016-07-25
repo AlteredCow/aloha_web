@@ -1,10 +1,6 @@
 # slideshow += cursor += imgs menu side
-# redo slideup of sub-menus (asian, family)
 # asian menu --> collapse all feature at top { animate }
-# shiftTo implement
-# "sticky header" implement
 
-# fix ul weird spacing in finalFoodSection
 # swap 20-80 split 
 # fix names (+= ids to _ & more descriptive naming)
 
