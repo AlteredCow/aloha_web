@@ -1,17 +1,14 @@
 /* ------------ COLLAPSABLE ASIAN TABLES -------------- */
-function toggleTables()
-{
-	var closeStatement = "Collapse All";
-	var openStatement = "Open All";
-	var asianTables = "#asianArea table";
-	var toggleBox = document.getElementById('collapseBox');
+
+
+function toggleTables(action){
 	
-	if (toggleBox.innerHTML === closeStatement) {
-		$(asianTables).fadeOut(300);
-		$(toggleBox).text(openStatement);
-	} else {
+	var asianTables = "#asianArea table";
+
+	if (action == "open") {
 		$(asianTables).fadeIn(800);
-		$(toggleBox).text(closeStatement);
+	} else {
+		$(asianTables).fadeOut(300);
 	}
 }
 
@@ -28,9 +25,14 @@ document.addEventListener("click", function (event){
 		var isOpen = $(clickedMenu).css("display") != "none";
 		if (isOpen){
 			$(clickedMenu).fadeOut(300);
+			
 		} else {
 			$(clickedMenu).fadeIn(600);
+			
 		}
+	
+	 	
+
 	
 	}
 }); 
@@ -62,7 +64,10 @@ window.addEventListener("scroll", function(func) {
 	   $(navMenu).css({
 				"position": "fixed",
 				"top":0,
-				"right": 0
+				"right": 0,
+				"float":"right",
+				"width":"20%"
+
 			});
 	} else {
 		   $(navMenu).css({

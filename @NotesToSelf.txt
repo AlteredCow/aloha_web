@@ -1,9 +1,11 @@
 # slideshow += cursor += imgs menu side
 # asian menu --> collapse all feature at top { animate }
+# nav-menu wonky upon scroll-in
 
 # fix names (+= ids to _ & more descriptive naming)
-# [asian] anchors are extending past words
-# nav-menu wonky upon scroll-in
+# shouldnt need asianArea 'columns'
+# whitespace when super zoomed-out
+# eliminate global vars
 
 % animations
 % Change headers to look more appealing, 

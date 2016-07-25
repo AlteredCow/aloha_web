@@ -72,6 +72,10 @@ th{
 		background: #EFEFEF;	
 }
 
+#asianArea, #hawaiianArea, #otherArea{
+	padding-bottom: 100px;
+}
+
 #hawaiianArea, #familySection, #otherArea, #contactSection{
 	border-top: 2px solid #212121;
 }
@@ -79,9 +83,6 @@ th{
 
 .main_content ul {
 
- 	columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
     column-gap: 0px;
 	-webkit-column-gap: 0px; 
     -moz-column-gap: 0px;
@@ -105,7 +106,13 @@ th{
 	
 }
 
-
+#family_food, #cateringNotes{
+	
+ 	columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+	
+}
 
 
 /* ------------------------------------------------------- */
@@ -125,7 +132,7 @@ th{
 #navWrapper{
 	float: right;
 	width: 20%;
-
+	
 }
 
 #navi li {
@@ -143,8 +150,8 @@ th{
 	height: 100%;
 }
 
-#navi a:hover {
-    background-color: #555;
+#navi a:hover , #closeBox:hover, #openBox:hover{
+    background-color: #AAA;
     color: white;
 }
 
@@ -153,19 +160,13 @@ th{
 
 /* ---- P1: BANNER AREA ------ */
 
-
-
-
 #homeArea{
-	
 	height: 350px;
-	
 }
 
 #homeList{
-
 	position: inline-block;
-	}
+}
 
 #storeFront { /* image of restaurant */
 	height: 300px; 
@@ -178,8 +179,6 @@ th{
 }
 
 #welcomeText{
-	
-	
 	display: block;
 	font-size: 48px; 
 	text-shadow: 0px 0px 5px #fff;
@@ -200,20 +199,23 @@ th{
 }
 
 #asianArea a{
-	display: block;
+	display: inline-block;
+
 	margin-top: 15px;
 	margin-bottom: 5px;
 	
 }
 
-#asianArea, #hawaiianArea, #otherArea{
-	padding-bottom: 100px;
+#closeBox, #openBox{
+	background: #D7D7D7;
+	padding: 10px;
+	width: 150px;
+	color: #5A3FEF;
 }
 
-#collapseBox{
-	background: #cdcdcd;
-	margin: auto;
-	padding: auto;
+{
+	background: #aaa;
+	color: #fff;
 }
 
 #leftSideAsian{
