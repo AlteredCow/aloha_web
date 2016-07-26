@@ -173,11 +173,8 @@ th{
 #storeFront { /* image of restaurant */
 	height: 300px; 
 	width: 200px;
-	margin: 10px;
-
-	box-shadow: 0px 0px 5px #000;
-	-moz-box-shadow: 0 0 5px #000;
-	-webkit-box-shadow: 0 0 5px #000;
+	margin: 0px 10px 10px 10px;
+	border: 2px solid #212121;
 }
 
 #welcomeText{
