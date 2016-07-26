@@ -344,90 +344,20 @@
             <p class="header"><br>
                Hawaiian Menu
             </p>
-            <table id="HawaiianMenu">
-               <thead>
-                  <tr>
-                     <td colspan = "2">
-                        <img alt = "Slideshow images" id="currentImg" src="./food_img/Hawaiian%20BBQ%20Chicken.jpg">
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan = "2" id = "description" class="highlighted">
-                        Grilled boneless &amp; skinless chicken, 
-                        <br>marinated in Hawaiian BBQ sauce. 
-                     </td>
-                  </tr>
-                  <tr>
-                     <th>ITEM</th>
-                     <th>PRICE</th>
-                  </tr>
-               </thead>
-               <tfoot>
-                  <tr></tr>
-               </tfoot>
-               <tbody>
-                  <tr>
-                     <td> Teriyaki Chicken </td>
-                     <td> $7.25 </td>
-                  </tr>
-                  <tr>
-                     <td> Hawaiian BBQ Chicken </td>
-                     <td> $7.25 </td>
-                  </tr>
-                  <tr>
-                     <td> Chicken Katsu </td>
-                     <td> $7.25 </td>
-                  </tr>
-                  <tr>
-                     <td> Chicken Mix </td>
-                     <td> $7.50 </td>
-                  </tr>
-                  <tr>
-                     <td> Aloha Crispy Shrimp </td>
-                     <td> $7.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Pork Katsu </td>
-                     <td> $7.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Hawaiian BBQ Beef </td>
-                     <td> $7.95 </td>
-                  </tr>
-                  <tr>
-                     <td> BBQ Chicken & Beef Mix </td>
-                     <td> $7.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Shrimp & BBQ Chicken Mix </td>
-                     <td> $7.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Loco Moco </td>
-                     <td> $7.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Aloha BBQ Pork Chop </td>
-                     <td> $8.50 </td>
-                  </tr>
-                  <tr>
-                     <td> Mahi Mahi </td>
-                     <td> $8.50 </td>
-                  </tr>
-                  <tr>
-                     <td> Aloha BBQ Mix </td>
-                     <td> $8.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Aloha Seafood Mix </td>
-                     <td> $8.95 </td>
-                  </tr>
-                  <tr>
-                     <td> Kalbi Short Ribs </td>
-                     <td> $9.95 </td>
-                  </tr>
-               </tbody>
-            </table>
+          
+		  
+		  <div id = "hawaiianMenu">
+			<img alt = "Slideshow images" id="currentImg" src="./food_img/Hawaiian%20BBQ%20Chicken.jpg">
+			<p>NAME - PRICE</p>
+			<p>DESCRIPTION</p>
+			<ul id = "hawaiianSlider">
+				<li><a href = "javascript:shiftImages('left');"><</a></li>
+				<li><img alt = "Slidedeck A" onclick="swapPhoto('1')" src="./food_img/Hawaiian%20BBQ%20Chicken.jpg"></li>
+				<li><img alt = "Slidedeck B" onclick="swapPhoto('2')" src="./food_img/Chicken%20Katsu.jpg"></li>
+				<li><img alt = "Slidedeck C" onclick="swapPhoto('3')" src="./food_img/Chicken%20Mix.jpg"></li>
+				<li><a href = "javascript:shiftImages('right');">></a></li>
+				</ul>
+		  </div>
          </div>
          <div id="otherArea">
             <p class="header" style="margin-top:50px">Family Meal</p>

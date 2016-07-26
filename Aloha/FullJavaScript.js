@@ -31,9 +31,6 @@ document.addEventListener("click", function (event){
 			
 		}
 	
-	 	
-
-	
 	}
 }); 
 
@@ -78,15 +75,35 @@ window.addEventListener("scroll", function(func) {
 });
 /* ------------------------------------------ */
 
-// Presentation for Hawaiian Menu dishes that
-// contain images, prices, and descriptions.
+/* ------------ SWAP SLIDESHOW IMAGES -------------- */
 
-/* Items separated into sets for possible future changes, ideas 
-	and to keep organized */
+function swapPhoto(selectedItem){
+	var slidePhotos = document.querySelectorAll("#hawaiianSlider li img");
+	var selectedPhoto = slidePhotos[selectedItem-1].src;
+	var presentPhoto = document.getElementById("currentImg");
+	presentPhoto.src = selectedPhoto;
+}
+
+function swapDeck(){
 	
-/* These items are organized by the order from the original site,
-	going through each row for each set. The exceptions are the 3 items
-	without pictures, one added to the end of each set. */
+}
+
+/* ------------------------------------------ */
+/* ------------ REBOUND FROM RESIZE -------------- */
+
+
+/* ------------------------------------------ */
+
+/* 
+ Presentation for Hawaiian Menu dishes that
+ contain images, prices, and descriptions.
+
+ Items separated into sets for possible future changes, ideas 
+ and to keep organized 
+	
+ These items are organized by the order from the original site,
+ going through each row for each set. The exceptions are the 3 items
+ without pictures, one added to the end of each set. */
 
 var images = new Array(
 // Set 1
@@ -155,35 +172,3 @@ var descriptions = [
 "Crispy Shrimp, Mahi-Mahi & BBQ Chicken",
 "2 beef patties, 2 sunnyside up eggs over gravy." 
 ];
-
-var currentPic = 0; var finalPic = images.length-1;
-
-function causePlay(){ // allows for "autoplay()" to repeat
-setInterval(function(){autoplay()}, 3600)
-}
-
-function autoplay(){
-	if (document.images){
-		if (currentPic==finalPic)currentPic = 0; // reset loop
-		else currentPic++; // cycle through loop
-		}
-		
-	// update picture (#4, 9, 14 are items w/ no pictures)
-	var pic = document.getElementById("currentImg");
-	if (currentPic != 4 && currentPic != 9 && currentPic != 14)
-	pic.src = images[currentPic];
-	else pic.src = "NoImage.png" 
-	
-	// update item's name
-	var name =	document.getElementById("name");
-	var actualName = images[currentPic];
-	name.innerHTML = actualName.substring(0, actualName.length-4);
-	
-	// update current price
-	var price =	document.getElementById("price");
-	price.innerHTML = prices[currentPic];
-	
-	// update current description
-	var desc =	document.getElementById("description");
-	desc.innerHTML = descriptions[currentPic];	
-}

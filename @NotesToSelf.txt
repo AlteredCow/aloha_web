@@ -1,9 +1,11 @@
 # slideshow += cursor += imgs menu side
 
+
 # fix names (+= ids to _ & more descriptive naming)
 # shouldnt need asianArea 'columns'
 # whitespace when super zoomed-out
 # eliminate global vars
+# compute : scroll to correct area after resize
 
 % animations
 % Change headers to look more appealing, 

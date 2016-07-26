@@ -226,30 +226,68 @@ th{
 
 /* ---- P3: HAWAIIAN MENU ---- */
 
-#hawaiianArea{
-	
+#hawaiianMenu{
+	width: 500px;
+	margin: auto;
 }
 
-#HawaiianMenu{
+/* to show images are clickable */
+#hawaiianMenu img{
+	cursor: pointer;
+}
 
-	border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
+#hawaiianMenu p{
+	background: blue;
+	margin: 0;
+	padding: 10px;
+}
+
+
+#hawaiianSlider{
+	margin: 0; 
+	padding: 0;
+	width: 500px;
+	background: #ddd;
+
+}
+
+#hawaiianSlider li, #hawaiianSlider a{
+	display: inline-block;
+	height: 100px;
+}
+
+#hawaiianSlider li:first-child{
+	margin-left: 0; 
+	float:left;
+}
+
+#hawaiianSlider li:last-child{
+	margin-right: 0; 
+	float:right;
+}
+
+#hawaiianSlider li > img{
+	width: 100px;
+	height: 70px;
+	padding: 10px;
+
+}
+
+#hawaiianSlider a{
+	font-size: 38px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #aaa;	
+	line-height: 100px;
 	
-	
-	-moz-border-radius: 4px;  
-	-khtml-border-radius: 4px;
-	-webkit-border-radius: 4px;
 }
 
 #currentImg{ /* regarding slide-deck */
-	
-	width: 290px; 
-	height: 210px;
-	border: 1px solid black;
+
+	width: 500px; 
+	height: 360px;
+
 }
-
-
 /* ------------------------------------------------------ */
 
 /* ---- P4: FINAL FOOD PORTION ---- */
