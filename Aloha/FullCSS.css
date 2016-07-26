@@ -128,7 +128,9 @@ th{
 
 }
 
-
+#mainContentWrapper, #navWrapper{
+	
+}
 #navWrapper{
 	float: right;
 	width: 20%;
@@ -180,6 +182,7 @@ th{
 
 #welcomeText{
 	display: block;
+	text-align: left;
 	font-size: 48px; 
 	text-shadow: 0px 0px 5px #fff;
 	-moz-text-shadow: 0 0 5px #fff;
@@ -213,10 +216,6 @@ th{
 	color: #5A3FEF;
 }
 
-{
-	background: #aaa;
-	color: #fff;
-}
 
 #leftSideAsian{
 	width: 50%; 
@@ -266,6 +265,8 @@ th{
 #family_food, #cateringNotes{
 	border: 5px solid #EA8C1B;
 	min-width: 600px;
+	padding: 5px;
+	background: blue;
 
 }
 
@@ -312,7 +313,8 @@ th{
 /* ------------------------------------------------- */
 
 /* ----- P*: Media Screen ---- */
-@media screen and (max-width: 950px){
+
+@media screen and (max-width: 1150px){
 	body{
 		min-width: 600px;
 	}
@@ -324,8 +326,6 @@ th{
 	
 	 #otherArea ul{
 		min-width: 140px;
-		
-	
 	 }
 	
 	#family_food li{
@@ -337,7 +337,6 @@ th{
 	}
 	
 	#welcomeText{
-		text-align: left;
 		font-size:  36px;
 	}
 	

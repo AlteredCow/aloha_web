@@ -1,5 +1,4 @@
 # slideshow += cursor += imgs menu side
-# asian menu --> collapse all feature at top { animate }
 # nav-menu wonky upon scroll-in
 
 # fix names (+= ids to _ & more descriptive naming)

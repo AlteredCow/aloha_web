@@ -65,8 +65,7 @@ window.addEventListener("scroll", function(func) {
 				"position": "fixed",
 				"top":0,
 				"right": 0,
-				"float":"right",
-				"width":"20%"
+
 
 			});
 	} else {
