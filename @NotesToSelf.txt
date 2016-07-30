@@ -1,5 +1,4 @@
-# slideshow += cursor += imgs menu side
-
+# hawaiian slideshow
 
 # fix names (+= ids to _ & more descriptive naming)
 # shouldnt need asianArea 'columns'
@@ -8,7 +7,6 @@
 # compute : scroll to correct area after resize
 
 % animations
-% Change headers to look more appealing, 
 
 ? small slideshow for asian pix
 ? Keep hours also on top of main page.

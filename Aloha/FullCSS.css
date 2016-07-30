@@ -1,4 +1,4 @@
-/* ---- GENERAL VALUES ---- */
+/*------- PRIMARY TAGS --------*/
 
 html{
 	
@@ -6,50 +6,42 @@ html{
 
 body
 {
+
 	background-image: url("./other_img/sky.JPG") !important; 
 	background: center center fixed no-repeat; 
-	font-family: arial;
-	text-align:center;
-	
-	min-width: 1250px;
-	overflow-x: hidden;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+		
 	margin: 0;
 	padding: 0;
-	
+	font-family: arial;
+	text-align: center;
+	min-width: 1250px;
+
 }
 
 a{ 
+	/* removes underline */
 	text-decoration:none; 
 }
 
 ul{ 
+	/* removes bullets; aligns content */
 	list-style-type:none;
-	margin-left:auto; margin-right:auto; 
-	
+	margin-left: auto; 
+	margin-right: auto; 
 }
 
 th{
+	/* ITEM-PRICE rows */
 	background-color: #F5B54D;	
 }
 
+/*------- GENERIC CLASSES --------*/ 
  
- /* alternating list-item colors */
- #asianArea tr:nth-child(odd),
- #hawaiianArea tr:nth-child(odd), 
- #otherArea tr:nth-child(odd) { 
-  	background: linear-gradient(#F9CB8A, #F5B54C); 
-		border-right: 3px black;
-
-	}
-	
-/* alternating list-item colors */	
- #asianArea tr:nth-child(even), 
- #hawaiianArea tr:nth-child(even),
- #otherArea tr:nth-child(even) { 
- 	background: linear-gradient(#EA8F21, #E4AD0C); 
-	}
-
-.highlighted { /* to separate special information */
+ .highlighted { /* to separate special information */
 	background-color: #cacaca;	
 	padding: 8px;
 	font-weight: 700;
@@ -61,27 +53,51 @@ th{
 	text-shadow: #AAAAAA 2px 2px 2px;
 }
 
-.food_type{
+.food_type{ /* Asian sub-menus */
 	font-size: 20px; 
 	font-weight: bold;
 }
 
+/* a divisor with tabs on both sides */
+.double_tab{ 
+	margin-left: 3em;
+	margin-right: 3em;
+	display: inline-block;
+}
+
+
+/*------- FOUNDATION BUILDING --------*/ 
+ 
+ /* alternating list-item colors - A */
+ #asianArea tr:nth-child(odd),
+ #hawaiianArea tr:nth-child(odd), 
+ #otherArea tr:nth-child(odd) { 
+  	/* background: linear-gradient(#F9CB8A, #F5B54C);  */
+	  	background: #FAD59B;
+		border-right: 3px black;
+
+	}
+	
+/* alternating list-item colors - B */	
+ #asianArea tr:nth-child(even), 
+ #hawaiianArea tr:nth-child(even),
+ #otherArea tr:nth-child(even) { 
+ 	/* background: linear-gradient(#EA8F21, #E4AD0C); */
+	 	background: #F3A224;
+	}
+
+
 #mainContentWrapper{
+		/* box containing all food menus, not navigation */
 		float: left;
 		width: 80%;
 		background: #EFEFEF;	
 }
 
-#asianArea, #hawaiianArea, #otherArea{
-	padding-bottom: 100px;
-}
-
-#hawaiianArea, #familySection, #otherArea, #contactSection{
-	border-top: 2px solid #212121;
-}
 
 
 .main_content ul {
+	/* compressing lists to help table-look */
 
     column-gap: 0px;
 	-webkit-column-gap: 0px; 
@@ -94,11 +110,12 @@ th{
 }
 
 .main_content table{
+	/* better alignment */
 	margin: 0 auto;
 	border-spacing: 0;
 }
 
-.main_content td{
+.main_content td{ /* table cells */
 	padding-top: 10px;
 	height: 40px;
 	font-size: 14px;
@@ -106,55 +123,59 @@ th{
 	
 }
 
-#family_food, #cateringNotes{
-	
- 	columns: 2;
+/*----- ID SHARED VALUES ----------*/
+
+#familyFood, #cateringNotes{
+ 	/* table-feel */
+	columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
-	
 }
 
+#asianArea, #hawaiianArea, #otherArea{
+	/* making sections more spacious */
+	margin-bottom: 100px;
+}
 
-/* ------------------------------------------------------- */
+#hawaiianArea, #familySection, #otherArea, #contactSection{
+	border-top: 2px solid #212121;
+}
+
+/* -------------------------------------------------------------------------- */
 
 
 /* ---- P*: NAVIGATION -------------------------------- */
 
 #navi { /* navigational menu */
-	z-index:999;
-	
 	margin: 0;
 	padding: 0;
+	z-index: 999; /* priority */
 
 }
 
-#mainContentWrapper, #navWrapper{
-	
-}
 #navWrapper{
+	/* keeping navigation rightside of food info */
 	float: right;
 	width: 20%;
-	
 }
 
 #navi li {
-	background: linear-gradient(#ECECEC, #D5D5D5);
-	display: block; 
+	background: linear-gradient(#ECECEC, #D8D8D8);
 	font-weight: bold;
-	font-size:13px;
-
+	font-size:13px;	
 }
 
 #navi a {
 	color: #6D6D6D;
 	display: block;
 	padding: 16px;
-	height: 100%;
+	height: 24px;
 }
 
 #navi a:hover , #closeBox:hover, #openBox:hover{
-    background-color: #AAA;
-    color: white;
+   /* highlights item with cursor on-top */
+   background-color: #AAA;
+   color: white;
 }
 
 /* ------------------------------------------------------ */
@@ -164,13 +185,11 @@ th{
 
 #homeArea{
 	height: 350px;
-}
-
-#homeList{
 	position: inline-block;
 }
 
 #storeFront { /* image of restaurant */
+	float: left;
 	height: 300px; 
 	width: 200px;
 	margin: 0px 10px 10px 10px;
@@ -178,7 +197,6 @@ th{
 }
 
 #welcomeText{
-	display: block;
 	text-align: left;
 	font-size: 48px; 
 	text-shadow: 0px 0px 5px #fff;
@@ -190,17 +208,21 @@ th{
 
 /* ---- P2: ASIAN MENUS ---- */
 
+#hoursOnTop{
+	background: #aaa;
+	margin: 0;
+	padding: 5px;
+	border-bottom: 2px solid black;
+}
+
 #asianArea{
-	
-	columns: 1;
-	-webkit-columns: 1;
-   	-moz-columns: 1;
-	
+	/* proper section boxing */
+	overflow: auto;
 }
 
 #asianArea a{
+	/* keeps sub-menus tidy */
 	display: inline-block;
-
 	margin-top: 15px;
 	margin-bottom: 5px;
 	
@@ -226,98 +248,131 @@ th{
 
 /* ---- P3: HAWAIIAN MENU ---- */
 
-#hawaiianMenu{
+#hawaiianMenu{ /* whole package */
 	width: 500px;
 	margin: auto;
+	background: #000;
 }
 
-/* to show images are clickable */
-#hawaiianMenu img{
-	cursor: pointer;
-}
-
-#hawaiianMenu p{
-	background: blue;
+#hawaiianMenu p{ 
+	background: #bbb;
 	margin: 0;
-	padding: 10px;
+	padding: 8px;
 }
 
 
-#hawaiianSlider{
+/*---- (( Entry Data )) -----------*/
+
+/* presented image */
+#currentImg{ /* regarding slide-deck */
+	width: 420px; 
+	height: 290px;
+	vertical-align: middle;
+	padding: 10px;
+
+}
+
+/* name and price */
+#hawaiianEntry{
+	margin-left: 25px;
+	font-weight: 600;
+}
+
+#entryDescription{
+	height: 40px;
+	display: table-cell;
+	vertical-align: middle;
+	width: 500px;
+	font-size: 14px;
+	
+}
+
+#pageDisplay{
+	font-size: 12px;
+}
+
+/*---- (( Slider Portion )) -----------*/
+
+#hawaiianSlider{ /* image slider */
 	margin: 0; 
 	padding: 0;
 	width: 500px;
-	background: #ddd;
+	background: #FF6262;
 
 }
 
 #hawaiianSlider li, #hawaiianSlider a{
 	display: inline-block;
-	height: 100px;
+	height: 110px;
 }
 
+#hawaiianSlider a:hover{
+	color: #FF0008;
+}
+
+/* keeps left-arrow flushed to side */
 #hawaiianSlider li:first-child{
 	margin-left: 0; 
 	float:left;
 }
 
+/* keeps right-arrow flushed to side */
 #hawaiianSlider li:last-child{
 	margin-right: 0; 
 	float:right;
 }
 
+/* thumbnails */
 #hawaiianSlider li > img{
 	width: 100px;
-	height: 70px;
-	padding: 10px;
-
+	height: 80px;
+	margin: 10px;
 }
 
+/* to highlight default entry */
+#firstSlide{
+	box-shadow: 0px 0px 12px blue;
+	-moz-box-shadow: 0 0 12px blue;
+	-webkit-box-shadow: 0 0 12px blue;
+}
+
+/* slider arrows */
 #hawaiianSlider a{
 	font-size: 38px;
 	padding-left: 20px;
 	padding-right: 20px;
-	background: #aaa;	
+	background: #000;	
 	line-height: 100px;
+	color: #fff;
 	
 }
 
-#currentImg{ /* regarding slide-deck */
-
-	width: 500px; 
-	height: 360px;
-
+/* to show thumbails are clickable */
+#hawaiianSlider img{
+	cursor: pointer;
 }
+
+
+
 /* ------------------------------------------------------ */
 
 /* ---- P4: FINAL FOOD PORTION ---- */
 
-#otherArea{
-		/*background: linear-gradient(#FFB472, #FFE639);*/
-	
-}
-
-#family_food, #cateringNotes{
+#familyFood, #cateringNotes{
 	border: 5px solid #EA8C1B;
 	min-width: 600px;
 	padding: 5px;
-	background: blue;
-
 }
 
-#family_food li, #cateringNotes li{
+#familyFood li, #cateringNotes li{
 	background: #FAD5A0;
 	border: 2px solid #EA8C1B;
 	padding: 12px;
 	
 }
 
-#catering{
-}
-
-
-#caterPic{
-	width:395px; height: 170px;
+#cateringImg{
+	width: 480px; height: 210px;
 	border: 2px solid #212121;
 	margin-bottom: 10px;
 }
@@ -327,15 +382,7 @@ th{
 
 /* ----- P5: REMAINING INFORMATION ---- */
 
-#contactSection{
-	/*background: linear-gradient(#EF1014, #E99B1A);*/
-
-	text-align:center;
-	font-family:arial;
-	
-}
-
-#aboutUs{
+#aboutUs{ /* 'About Us' super-header */
 	font-size: 42px;	
 	text-decoration: underline;
 	margin-bottom: 60px;
@@ -349,9 +396,43 @@ th{
 
 /* ----- P*: Media Screen ---- */
 
+
+
+/* various proportion changes on smaller screens or windows */
 @media screen and (max-width: 1150px){
 	body{
-		min-width: 600px;
+		min-width: 450px;
+	}
+	
+	#mainContentWrapper{
+		overflow-x: scroll;
+		width: 85%;
+	}
+	
+	#navWrapper{
+		width: 15%;
+	}
+	
+	#hawaiianMenu, #hawaiianSlider{
+		width: 450px;
+	}
+	
+	#hawaiianSlider a{
+		padding: 0px 10px 0px 10px;
+	}
+	
+	#currentImg{
+		width: 360px;
+		height: 250px;
+	}
+	
+	#hawaiianSlider li > img{
+		width: 95px;
+		height: 80px;
+	}
+	
+	#navWrapper li, #cateringNotes{
+		font-size: 12px;
 	}
 	
 	#otherArea td{
@@ -363,7 +444,7 @@ th{
 		min-width: 140px;
 	 }
 	
-	#family_food li{
+	#familyFood li{
 		height: 40px;
 	}
 	
@@ -375,17 +456,18 @@ th{
 		font-size:  36px;
 	}
 	
+	/* forming single sub-menus column */
 	#leftSideAsian{
-	width: 100%; 
-	float: left;
+		width: 100%; 
+		float: left;	
+	}
 	
-}
+	/* forming single sub-menus column */
 	#rightSideAsian{
-	width: 100%; 
-	float: left;	
-}
-
-
+		width: 100%; 
+		float: left;	
+	}	
+		
 }
 
 /* ---------------------------------
