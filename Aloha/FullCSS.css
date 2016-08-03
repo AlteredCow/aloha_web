@@ -457,19 +457,22 @@ th{
 	#welcomeText{
 		font-size:  36px;
 	}
-	
-	/* forming single sub-menus column */
+
+			
+
+	/* forming single sub-menus column  */	
 	#leftSideAsian{
 		width: 100%; 
 		float: left;	
 	}
 	
-	/* forming single sub-menus column */
+	/* forming single sub-menus column  */	
 	#rightSideAsian{
 		width: 100%; 
 		float: left;	
 	}	
-		
+
+
 }
 
 /* ---------------------------------

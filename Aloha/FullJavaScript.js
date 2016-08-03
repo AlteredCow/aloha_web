@@ -1,70 +1,87 @@
+var AlohaNS = {};  // global namespace
 
-$(function() { 			/* after page loads, detect the total height */
-/* --------------- (( EVENT LISTENERS )) ------------------------------------------*/
+$(function() { // waits for DOM to load
 
 
+    /* ========= (( EVENT LISTENERS )) ================== */
 
-/* --------- STICKY NAV MENU ------------- */
-window.addEventListener("scroll", function(func) {
-    var currentLocation = $(window).scrollTop();
-    var threshold = $('#mainContentWrapper').position().top;
-    var navMenu = "#navWrapper";
 
-    if (currentLocation > threshold) {
-        $(navMenu).css({
-            "position": "fixed",
-            "top": 0,
-            "right": 0,
-        });
-    } else {
-        $(navMenu).css({
-            "position": "static"
-        });
-    }
-});
-/* ------- TOGGLE INDIVIDUAL ASIAN TABLES ------------- */
+    /* --------- STICKY NAV MENU ------------- */
+    window.addEventListener("scroll", function(func) {
+        var currentLocation = $(window).scrollTop();
+        var threshold = $('#mainContentWrapper').position().top;
+        var navMenu = "#navWrapper";
 
-document.addEventListener("click", function(event) {
-
-    var clickedElement = event.target;
-    if (clickedElement.classList.contains("food_type")) {
-
-        // ! IMPORTANT - requires schema: table follows <a> header 
-        var clickedMenu = $(clickedElement).next("table");
-
-        // toggle visibility 
-        var isOpen = $(clickedMenu).css("display") != "none";
-        if (isOpen) {
-            $(clickedMenu).fadeOut(300);
+        if (currentLocation > threshold) {
+            $(navMenu).css({
+                "position": "fixed",
+                "top": 0,
+                "right": 0,
+            });
         } else {
-            $(clickedMenu).fadeIn(600);
-
+            $(navMenu).css({
+                "position": "static"
+            });
         }
-    }
+    });
+	
+    /* ------- TOGGLE INDIVIDUAL ASIAN TABLES ------------- */
+
+    document.addEventListener("click", function(event) {
+
+        var clickedElement = event.target;
+        if (clickedElement.classList.contains("food_type")) {
+
+            // ! IMPORTANT : requires schema: table follows <a> header 
+            var clickedMenu = $(clickedElement).next("table");
+
+            // toggle visibility 
+            var isOpen = $(clickedMenu).css("display") != "none";
+            if (isOpen) {
+                $(clickedMenu).fadeOut(300);
+            } else {
+                $(clickedMenu).fadeIn(600);
+
+            }
+        }
+    });
+
+    /* ------------ READJUST SCROLL POSITION AFTER WINDOW RESIZE -------------- */
+
+
+	var mediaScreenMaxWidth = 1150; 
+    var pageLength = 1;
+	var resizeID;
+	var originalWidth = window.innerWidth;
+    window.addEventListener("resize", function() {
+		clearTimeout(resizeID);
+		resizeID = setTimeout(function(){
+		
+			var oldScrollPosition = $(document).scrollTop();
+			var adjustment = 0;
+			var newWidth = window.innerWidth;
+			
+			/* adjust scroll position if pageLength will differ based off CSS @media-screen */
+			if (newWidth < mediaScreenMaxWidth && originalWidth > mediaScreenMaxWidth){
+				adjustment += 4000;
+			}
+			else if (newWidth > mediaScreenMaxWidth && originalWidth < mediaScreenMaxWidth){
+				adjustment -= 4000;			
+			} 
+		
+		$("html").scrollTop(oldScrollPosition += adjustment);
+		$(window).trigger("scroll");
+		
+		}, 200);
+	
+
+    });
+
+
 });
 
-/* ------------ REBOUND FROM RESIZE -------------- */
-
-
-var height = 0; 
-
-	height = $("html").height();
-
-
-window.addEventListener("resize", function(){
-	height = $("html").height();
-		console.log(height);
-   /* var ratio = 0.7;
-    var newScrollMark = $(window).height() * ratio;
-    $(window).scrollTop(newScrollMark);
-	*/
-
-});
-
-});
-
-/* --------------  (( USING NAMESPACE )) ---------------------------- */
-var alohaNS = function() {
+/* =========  (( USING NAMESPACE )) ================== */
+AlohaNS = function() {
 
     /* ------------ TOGGLE ALL ASIAN MENUS -------------- */
     function toggleTables(action) {
@@ -139,6 +156,7 @@ var alohaNS = function() {
 
 
     var entriesPerPage = 3;
+
     function shiftDeck(direction) {
 
         // cycling through the pages
@@ -165,7 +183,7 @@ var alohaNS = function() {
             slidePhotos[i].src = containingFolder + newSource;
         }
 
-		// updating highlight of new page and page count
+        // updating highlight of new page and page count
         swapEntry(1);
         var pageDisplay = document.getElementById('pageDisplay');
         pageDisplay.innerHTML = "Page " + deckNumber + " out of 5";
@@ -257,9 +275,9 @@ var alohaNS = function() {
         "$7.95" /* Loco moco */
     ];
 
-	
-	/* ----------------- END OF ADDING VARIABLES AND FUNCTIONS ------------ */
-	
+
+    /* ========= END OF ADDING VARIABLES AND FUNCTIONS =============== */
+
     /* to make functions externally accessible */
     return {
         toggleTables: toggleTables,
