@@ -39,6 +39,7 @@ th{
 	background-color: #F5B54D;	
 }
 
+
 /*------- GENERIC CLASSES --------*/ 
  
  .highlighted { /* to separate special information */
@@ -186,6 +187,7 @@ th{
 #homeArea{
 	height: 350px;
 	position: inline-block;
+
 }
 
 #storeFront { /* image of restaurant */
@@ -209,7 +211,7 @@ th{
 /* ---- P2: ASIAN MENUS ---- */
 
 #hoursOnTop{
-	background: #aaa;
+	background: #FAD59B;
 	margin: 0;
 	padding: 5px;
 	border-bottom: 2px solid black;
@@ -331,9 +333,9 @@ th{
 
 /* to highlight default entry */
 #firstSlide{
-	box-shadow: 0px 0px 12px blue;
-	-moz-box-shadow: 0 0 12px blue;
-	-webkit-box-shadow: 0 0 12px blue;
+	box-shadow: 0px 0px 12px #fff;
+	-moz-box-shadow: 0 0 12px #fff;
+	-webkit-box-shadow: 0 0 12px #fff;
 }
 
 /* slider arrows */
