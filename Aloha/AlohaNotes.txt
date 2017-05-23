@@ -1,0 +1,22 @@
+AUSTIN TODO:
+	* replace "header" class with custom <h1>
+	* some IDs and Classes need clearer names
+	? compute : scroll to correct area after resize
+	
+QUESTIONS
+	* Differences between catering prices? (columns: Price-X, Price-Y)
+	* Is there a video to include? 
+	* Stop the menu slide? Replace with skip to area? 
+
+FROM OWNERS
+	* New prices?
+	* Images missing for a few iems
+
+SUGGESTIONS	
+	* Change URL (too long / verbose)
+	* Add testimonies?
+	* Before publishing, let me 'beautify' the code (less server space)
+	
+TESTING
+	* Try on multiple computers (sizes, OS).
+	* Try on mobile phone (once published?)
