@@ -382,10 +382,15 @@ th{
 
 /* ----- P5: REMAINING INFORMATION ---- */
 
+
 #aboutUs{ /* 'About Us' super-header */
 	font-size: 42px;	
 	text-decoration: underline;
 	margin-bottom: 60px;
+}
+
+#mapImage{
+	border: 1px silver solid;
 }
 
 #copyright{
@@ -395,8 +400,6 @@ th{
 /* ------------------------------------------------- */
 
 /* ----- P*: Media Screen ---- */
-
-
 
 /* various proportion changes on smaller screens or windows */
 @media screen and (max-width: 1100px){
