@@ -82,6 +82,8 @@ AlohaNS = function() {
 
     /* ------------ SWAP SLIDESHOW IMAGES -------------- */
 
+    const entriesPerPage = 3;
+
     // replaces all substring occurences in string subject
     function replaceAll(subject, target, replacement) {
         return subject.split(target).join(replacement);
@@ -93,10 +95,10 @@ AlohaNS = function() {
     // swaps Hawaiian slide -- image, name, price, and description
     function swapEntry(selectedItem) {
         var slidePhotos = document.querySelectorAll("#hawaiianSlider li img");
-        var dataIndex = (selectedItem * deckNumber) - 1;
+        var dataIndex = (entriesPerPage * (deckNumber -1)) + + selectedItem - 1;
         var selectedSlot = slidePhotos[selectedItem - 1]; // the image box
         var selectedPhoto = selectedSlot.src;
-        var presentPhoto = document.getElementById("currentImg");
+        var presentPhoto = $("#currentImg");
 
         var foodEntry = document.getElementById('hawaiianEntry');
         var foodName = replaceAll(imageCollection[dataIndex], "%20", " ");
@@ -105,7 +107,11 @@ AlohaNS = function() {
 
         // swapping appropriate information to selected food item
         var separator = "<span id = 'doubleTab'> | </span>";
-        presentPhoto.src = selectedPhoto;
+        presentPhoto.fadeOut(200, function() {
+       presentPhoto.attr("src", selectedPhoto);
+       presentPhoto.fadeIn(300);
+   });
+        // presentPhoto.src = selectedPhoto;
         foodEntry.innerHTML = foodName + separator + foodPrice;
         foodDetails.innerHTML = descriptions[dataIndex]
 
@@ -125,7 +131,7 @@ AlohaNS = function() {
     }
 
 
-    var entriesPerPage = 3;
+    
 
     function shiftDeck(direction) {
 
@@ -170,7 +176,7 @@ AlohaNS = function() {
         "Chicken%20Mix",
 
         // Set 2
-        "Kalbi%20Short%20Ribs",
+        "Kalbi%20Short%20Ribs", 
         "Teriyaki%20Chicken", /* no img */
         "Aloha%20Crispy%20Shrimp",
 
@@ -202,7 +208,7 @@ AlohaNS = function() {
         // Set 2
         "Tender beef short-ribs marinated in Korean style BBQ sauce, then grilled to perfection",
         "Grilled boneless chicken served with our house teriyaki sauce.",
-        "-", /* this item does not have a description" */
+        "", /* this item does not have a description" */
 
         // Set 3
         "Crispy breaded pork served with special Katsu Sauce.",
